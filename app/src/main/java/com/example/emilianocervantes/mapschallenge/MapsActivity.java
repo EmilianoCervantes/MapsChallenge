@@ -60,6 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        mQueue = VolleySingleton.getInstance(this).getRequestQueue();
         //Globito para que nos de permiso
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             checkLocationPermission();
